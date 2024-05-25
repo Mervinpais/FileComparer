@@ -14,6 +14,7 @@ namespace FileComparer
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.ShowDialog();
             filePath1 = ofd.FileName;
+            filepath1LB.Text = ofd.FileName;
             Compare();
         }
 
@@ -22,6 +23,7 @@ namespace FileComparer
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.ShowDialog();
             filePath2 = ofd.FileName;
+            filepath2LB.Text = ofd.FileName;
             Compare();
         }
 
@@ -29,14 +31,21 @@ namespace FileComparer
         {
             if (filePath1 != "" && filePath2 != "")
             {
-                if (File.ReadAllBytes(filePath1) == File.ReadAllBytes(filePath2))
+                statusLB.ForeColor = Color.Orange;
+                statusLB.Text = "Checking...";
+
+                extraStatusLB.Text = 
+                    $"File Length Diff: {Math.Abs(File.ReadAllBytes(filePath1).Length - File.ReadAllBytes(filePath2).Length)} bytes";
+                byte[] f1 = File.ReadAllBytes(filePath1);
+                byte[] f2 = File.ReadAllBytes(filePath2);
+                if (f1.SequenceEqual(f2)) // Compare the contents of the arrays
                 {
-                    statusLB.ForeColor = Color.Green;
+                    statusLB.ForeColor = Color.LightGreen;
                     statusLB.Text = "They are the same!";
                 }
                 else
                 {
-                    statusLB.ForeColor = Color.Red;
+                    statusLB.ForeColor = Color.FromArgb(255,96,96);
                     statusLB.Text = "They are NOT the same!";
                 }
             }
@@ -48,6 +57,25 @@ namespace FileComparer
         }
 
         private void filepath1LB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusLB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("""
+                Click on the first button to select file 1
+                Click on the second button to select file 2
+                The Textbox/Label in the Middle will say whether the 2 files are the same or not
+                """);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
