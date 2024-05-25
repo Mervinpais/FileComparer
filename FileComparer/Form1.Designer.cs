@@ -31,6 +31,8 @@
             file1BTN = new Button();
             file2BTN = new Button();
             statusLB = new Label();
+            filepath1LB = new Label();
+            filepath2LB = new Label();
             SuspendLayout();
             // 
             // file1BTN
@@ -45,7 +47,7 @@
             // 
             // file2BTN
             // 
-            file2BTN.Location = new Point(548, 260);
+            file2BTN.Location = new Point(529, 260);
             file2BTN.Name = "file2BTN";
             file2BTN.Size = new Size(150, 46);
             file2BTN.TabIndex = 1;
@@ -55,25 +57,46 @@
             // 
             // statusLB
             // 
-            statusLB.AutoSize = true;
-            statusLB.Location = new Point(168, 100);
+            statusLB.Location = new Point(73, 106);
             statusLB.Name = "statusLB";
-            statusLB.Size = new Size(78, 32);
+            statusLB.Size = new Size(606, 131);
             statusLB.TabIndex = 2;
             statusLB.Text = "label1";
+            statusLB.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // filepath1LB
+            // 
+            filepath1LB.Location = new Point(73, 319);
+            filepath1LB.Name = "filepath1LB";
+            filepath1LB.Size = new Size(243, 45);
+            filepath1LB.TabIndex = 3;
+            filepath1LB.Text = "label1";
+            filepath1LB.TextAlign = ContentAlignment.MiddleCenter;
+            filepath1LB.Click += filepath1LB_Click;
+            // 
+            // filepath2LB
+            // 
+            filepath2LB.Location = new Point(436, 319);
+            filepath2LB.Name = "filepath2LB";
+            filepath2LB.Size = new Size(243, 45);
+            filepath2LB.TabIndex = 4;
+            filepath2LB.Text = "label1";
+            filepath2LB.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(752, 388);
+            Controls.Add(filepath2LB);
+            Controls.Add(filepath1LB);
             Controls.Add(statusLB);
             Controls.Add(file2BTN);
             Controls.Add(file1BTN);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -81,5 +104,7 @@
         private Button file1BTN;
         private Button file2BTN;
         private Label statusLB;
+        private Label filepath1LB;
+        private Label filepath2LB;
     }
 }
