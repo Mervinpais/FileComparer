@@ -51,21 +51,6 @@ namespace FileComparer
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void filepath1LB_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void statusLB_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("""
@@ -73,11 +58,6 @@ namespace FileComparer
                 Click on the second button to select file 2
                 The Textbox/Label in the Middle will say whether the 2 files are the same or not
                 """);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

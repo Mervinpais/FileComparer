@@ -74,7 +74,6 @@
             statusLB.TabIndex = 2;
             statusLB.Text = "...";
             statusLB.TextAlign = ContentAlignment.MiddleCenter;
-            statusLB.Click += statusLB_Click;
             // 
             // filepath1LB
             // 
@@ -86,7 +85,6 @@
             filepath1LB.TabIndex = 3;
             filepath1LB.Text = "<file1>";
             filepath1LB.TextAlign = ContentAlignment.MiddleLeft;
-            filepath1LB.Click += filepath1LB_Click;
             // 
             // filepath2LB
             // 
@@ -124,7 +122,6 @@
             extraStatusLB.TabIndex = 6;
             extraStatusLB.Text = "...";
             extraStatusLB.TextAlign = ContentAlignment.MiddleCenter;
-            extraStatusLB.Click += label1_Click;
             // 
             // Form1
             // 
@@ -141,7 +138,6 @@
             Controls.Add(file1BTN);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
             ResumeLayout(false);
         }
 
