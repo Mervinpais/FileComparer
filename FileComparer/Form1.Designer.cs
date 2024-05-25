@@ -137,7 +137,7 @@
             Controls.Add(file2BTN);
             Controls.Add(file1BTN);
             Name = "Form1";
-            Text = "Form1";
+            Text = "File Comparer";
             ResumeLayout(false);
         }
 

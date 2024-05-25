@@ -57,6 +57,8 @@ namespace FileComparer
                 Click on the first button to select file 1
                 Click on the second button to select file 2
                 The Textbox/Label in the Middle will say whether the 2 files are the same or not
+
+                © 2024 Mervinpais @ github.com/Mervinpais
                 """);
         }
     }
